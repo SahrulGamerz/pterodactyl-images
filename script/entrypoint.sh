@@ -16,6 +16,9 @@ export PATH="$PATH:."
 # Add color to shell
 export PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
 
+# Create a symlink inside /home/container
+ln -sfn /app ./
+
 # Replace Startup Variables
 #MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
 echo "${USER}@$(hostname):${HOME}$ ${STARTUP}"
